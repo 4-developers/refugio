@@ -76,3 +76,8 @@ class SolicitudUpdate(UpdateView):
 			return HttpResponseRedirect(self.get_success_url())
 		else:
 			return HttpResponseRedirect(self.get_success_url())
+class SolicitudDelete(DeleteView):
+	model = Solicitud
+	template_name = 'adopcion/solicitud_delete.html'
+	success_url = reverse_lazy('adopcion:solicitud_list')
+	

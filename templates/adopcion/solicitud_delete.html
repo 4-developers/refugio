@@ -5,6 +5,6 @@
 	{% csrf_token %}
 	<h3>¿Desea eliminar la solicitud de {{ object.persona.nombre }}{{ object.persona.apellidos }}?</h3>	
 	<button class="btn btn-danger" type="submit">Sí, eliminar</button>
-	<a class= "btn btn-default" href="{% url 'mascota:mascota_listar' %}">Cancelar</a>
+	<a class= "btn btn-default" href="{% url 'adopcion:solicitud_list' %}">Cancelar</a>
 </form>
 {% endblock %}
